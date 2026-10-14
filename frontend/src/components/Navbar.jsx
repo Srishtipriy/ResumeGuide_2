@@ -20,42 +20,18 @@ function Navbar() {
 
       <div className="nav-links">
 
-        <Link to="/">
-          Home
-        </Link>
+        <Link to="/">Home</Link>
 
-        {token ? (
-          <>
-            <Link to="/dashboard">
-              Dashboard
-            </Link>
+        {token ? (<><Link to="/dashboard">  Dashboard</Link>
 
-            <Link to="/history">
-              History
-            </Link>
+            <Link to="/history">  History</Link>
 
-            <Link to="/upload">
-              Analyze Another
-            </Link>
+            <Link to="/upload">  Analyze Another</Link>
 
-            <button
-              className="logout-btn"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
-          </>
-        ) : (
-          <>
-            <Link to="/login">
-              Login
-            </Link>
+            <button className="logout-btn"  onClick={handleLogout}>  Logout  </button></>) : (<><Link to="/login">  Login</Link>
 
-            <Link to="/register">
-              Register
-            </Link>
-          </>
-        )}
+            <Link to="/register">  Register</Link></>
+            )}
 
       </div>
 
